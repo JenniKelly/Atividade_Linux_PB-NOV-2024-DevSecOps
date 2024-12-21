@@ -13,7 +13,7 @@ DATA_HORA=$(date "+%Y-%m-%d %H:%M:%S")
 # Verifica o status do serviço e encaminha mensagem de status para os arquivos de log ONLINE e OFFLINE
 if systemctl is-active --quiet nginx; then
     STATUS="ONLINE"
-    MENSAGEM="$DATA_HORA | Serviço: $SERVICO | Status: $STATUS | Mensagem: O serviço está funcionando normalm>
+    MENSAGEM="$DATA_HORA | Serviço: $SERVICO | Status: $STATUS | Mensagem: O serviço está funcionando normalmente."
     echo "$MENSAGEM" >> "$ONLINE_LOG"
 else
     STATUS="OFFLINE"
