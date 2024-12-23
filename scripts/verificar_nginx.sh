@@ -15,8 +15,10 @@ if systemctl is-active --quiet nginx; then
     STATUS="ONLINE"
     MENSAGEM="$DATA_HORA | Serviço: $SERVICO | Status: $STATUS | Mensagem: O serviço está funcionando normalmente."
     echo "$MENSAGEM" >> "$ONLINE_LOG"
+    echo "NGINX está ONLINE"
 else
     STATUS="OFFLINE"
     MENSAGEM="$DATA_HORA | Serviço: $SERVICO | Status: $STATUS | Mensagem: O serviço está fora do ar."
     echo "$MENSAGEM" >> "$OFFLINE_LOG"
+    echo "NGINX está OFFLINE"
 fi
